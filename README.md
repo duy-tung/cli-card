@@ -1,4 +1,4 @@
-# duy-tung
+# A personal card for duy-tung
 
 ```bash
 npx duy-tung
