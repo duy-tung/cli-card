@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const project = path.join(__dirname, '../tsconfig.json');
+const dev = fs.existsSync(project);
+
+const output = fs.readFileSync(
+  path.join(__dirname, `../${dev ? 'src' : 'lib'}`, 'output'),
+  'utf8'
+);
+
+console.log(output);
